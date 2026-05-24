@@ -113,7 +113,7 @@ export async function verifyHandler(req: Request, res: Response) {
       domain: {
         name: "USD Coin",
         version: "2",
-        chainId: 84532, // Base Sepolia
+        chainId: 11155111, // Sepolia
         verifyingContract: CONTRACTS.USDC,
       },
       types: {

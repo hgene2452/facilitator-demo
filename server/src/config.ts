@@ -1,6 +1,6 @@
 import { createPublicClient, createWalletClient, http } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
-import { baseSepolia } from "viem/chains";
+import { sepolia } from "viem/chains";
 import * as dotenv from "dotenv";
 dotenv.config();
 
@@ -9,14 +9,14 @@ export const account = privateKeyToAccount(process.env.FACILITATOR_PRIVATE_KEY a
 
 // 블록체인 읽기용 클라이언트
 export const publicClient = createPublicClient({
-  chain: baseSepolia,
+  chain: sepolia,
   transport: http(process.env.RPC_URL),
 });
 
 // 블록체인 쓰기용 클라이언트
 export const walletClient = createWalletClient({
   account,
-  chain: baseSepolia,
+  chain: sepolia,
   transport: http(process.env.RPC_URL),
 });
 
